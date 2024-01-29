@@ -6,12 +6,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>daptar siswa</title>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 </head>
   
 <body class="m-4">
 <h1>daftar siswa<h1>
   
+  <ul id ="daftar-siswa"></ul>
+  
   <a href="index.html">form tambah siswa</a>
+  
+  <script type="module">
+  import { ambilDaftarsiswa } from "./main.js";
+  
+  $(document).ready(async function(){
+    let elemenNamasiswa = $('#daftar-siswa');
+    let daftarsiswa =await ambilDaftarsiswa();
+    
+    daftarsiswa.forEach((data) => {
+     elemenNamasiswa.append(
+       '<li>' +
+       data.nama +
+       '</li>'
+       );
+     });
+    });
+    </script>
 </body>
 
 
