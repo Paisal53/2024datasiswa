@@ -23,8 +23,22 @@
   
   
   </div>
-  <button type="submit" class="btn btn-primary">simpan</button>
+  <button type="submit" class="btn btn-primary" id=:"tombol-tambah">simpan</button>
 </form>
  <a href="siswa.html" class="mt-1"> lihat Daftar Siswa</a></a>
+ 
+ <<script type="module">
+   import {tambahsiswa} from './main.js';
+   
+   let tomboltambah = document.getElementByid('tombol-tambah');
+   let elemenNamasiswa = document.getElementByid('input-nama');
+   
+   tomboltambah.addEventListener('click',async function (el){
+     el.preventDefault();
+     await tambahsiswa(elemenNamasiswa.value);
+     window.location.href ='siswa.html';
+   });
+ </script>
 </body>
+
 </html>
