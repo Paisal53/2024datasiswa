@@ -41,7 +41,7 @@ export async function ambilDaftarSiswa () {
 
 export async function tambahsiswa(nama){
  try {
-  const docRef = await addDoc(collection(db,"siswa "), {
+  const docRef = await addDoc(collection(db,"siswa"), {
     nama: val
   });
   console.log('Berhasil menyimpan dokumen dengan ID:' + docRef.id);
