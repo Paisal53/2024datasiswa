@@ -39,7 +39,7 @@ export async function ambilDaftarSiswa () {
   
 }
 
-export async function tambahsiswa(nama){
+export async function tambahsiswa(val){
  try {
   const docRef = await addDoc(collection(db,"siswa"), {
     nama: val
