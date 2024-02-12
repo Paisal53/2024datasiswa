@@ -50,6 +50,6 @@ export async function tambahsiswa(val){
   }
 }
 
-export async function hapussiswa(docId){
+export async function hapusSiswa(docId){
   await deleteDoc(doc(db,"siswa"),docId);
 }
