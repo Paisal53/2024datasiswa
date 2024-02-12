@@ -36,14 +36,14 @@
           '<div>'+
           ' <button class="btn btn-danger tombol-hapus" data="'+
           data.id+
-         ' ">hapus</button>'+
+         '">hapus</button>'+
           '</div>'+
           '</li>'
         );
       });
       
       $('.tombol-hapus').click(async function() {
-        await  hapusSiswa($(this).attr('data'));
+        await hapusSiswa($(this).attr('data'));
         location.reload();
       })
     });
