@@ -34,11 +34,18 @@
           data.nama +
           '</label>'+
           '<div>'+
-          ' <button class="btn btn-danger tombol-hapus">hapus</button>'+
+          ' <button class="btn btn-danger tombol-hapus" data="'+
+          data.id+
+         ' ">hapus</button>'+
           '</div>'+
           '</li>'
         );
       });
+      
+      $('.tombol-hapus').click(async function() {
+        await hapus hapusSiswa($(this).attr('data'));
+        location.reload();
+      })
     });
   </script>
 </body>
