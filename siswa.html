@@ -29,9 +29,13 @@
       
       daftarSiswa.forEach((data) => {
         elemenNamaSiswa.append(
-          '<li class="list-group-item">' +
+          '<li class="list-group-item d-flex justify-content-between">' +
+          '<label>'+
           data.nama +
+          '</label>'+
+          '<div>'+
           ' <button class="btn btn-danger tombol-hapus">hapus</button>'+
+          '</div>'+
           '</li>'
         );
       });
